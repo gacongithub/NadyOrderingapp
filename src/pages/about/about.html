@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Người sử dụng
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding style="background-color: #ecf0f1">
+  <ion-card>
+    <ion-list>
+      <ion-item>
+        <ion-avatar item-left>
+          <img src="http://imageshack.com/a/img922/5596/D1g0Sj.png">
+        </ion-avatar>
+        <h2>Xin chào {{username}}</h2>
+        <!--<h2>Xin chào Nhân </h2>-->
+      </ion-item>
+    </ion-list>
+  </ion-card>
+  <ion-card>
+
+  <ion-list>
+    <button ion-item (click)="logout()">
+      <ion-icon name="ios-log-out" item-left></ion-icon>
+      Đăng xuất
+    </button>
+
+    
+
+  </ion-list>
+</ion-card>
+
+</ion-content>

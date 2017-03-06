@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Nadyphar Mobile App</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-list-header>
+      Chức năng
+    </ion-list-header>
+    <button ion-item (click)="navTaodonhang()">
+      <ion-icon name="ios-cart-outline" item-left ></ion-icon>
+      Tạo đơn hàng
+    </button>
+    <button ion-item>
+      <ion-icon name="ios-reorder" item-left></ion-icon>
+      Danh sách đơn hàng
+    </button>
+  </ion-list>
+  <ion-list>
+    <ion-list-header>
+      Báo cáo
+    </ion-list-header>
+    <button ion-item>
+      Đơn hàng đã ra hóa đơn
+      <ion-note item-right color="royal">15</ion-note>
+    </button>
+    <button ion-item>
+      Đơn hàng chưa ra hóa đơn
+      <ion-note item-right color="secondary">5</ion-note>
+    </button>
+    <button ion-item>
+      Đơn hàng đã giao
+      <ion-note item-right color="royal">9</ion-note>
+    </button>
+    <button ion-item>
+      Đơn hàng chưa giao
+      <ion-note item-right color="secondary">6</ion-note>
+    </button>
+  </ion-list> 
+</ion-content>
