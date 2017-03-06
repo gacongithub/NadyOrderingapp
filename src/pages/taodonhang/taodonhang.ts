@@ -36,11 +36,13 @@ export class TaodonhangPage {
   sanphams: LstSanpham[] = [];
   soluongchon:any;
   quycachchon:any;
+  _color:string;
   constructor(public navCtrl: NavController, public navParams: NavParams, 
   public http:Http, public platform:Platform, public loadingCtrl:LoadingController, public dhservice:Donhang,
   public alertCtrl:AlertController) {
      this.isAndroid = platform.is('android');
      
+    this._color="secondary"; 
     this.load_dmkh();
     this.load_dmtp();
     //this.initializeItems();
@@ -66,6 +68,7 @@ export class TaodonhangPage {
  getkh(kh)
  {
     this.khchon=kh.ten_kh;
+    this._color="danger";
  }
  getsp(sp)
  {

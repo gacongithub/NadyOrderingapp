@@ -39,8 +39,8 @@
             <h4 class="noidung3">Số lượng: {{item.soluong}} {{item.quycach}}</h4>
           </ion-item>
           <ion-item-options side="right">
-            <button ion-button color="primary">Sửa</button>
-            <button ion-button color="danger">Xóa</button>
+            <button ion-button color="primary" (click)="SuaHH(item)">Sửa</button>
+            <button ion-button color="danger" (click)="XoaHH(item)">Xóa</button>
           </ion-item-options>          
         </ion-item-sliding>
         

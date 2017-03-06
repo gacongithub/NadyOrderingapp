@@ -74,6 +74,45 @@ export class DonhangPage {
     });
     prompt.present();
   }
+
+  SuaHH(sp) {
+    let prompt = this.alertCtrl.create({
+      title: sp.tensp,
+      message: "Chọn số lượng",
+      inputs: [
+        {
+          name: 'soluong',
+          placeholder: 'Số lượng'
+        },
+        {
+          name:'quycach',
+          placeholder:'C: Chai, H: Hộp, T: Thùng'
+        }
+      ],
+      buttons: [
+        {
+          text: 'Cancel',
+          handler: data => {
+            console.log('Cancel clicked');
+          }
+        },
+        {
+          text: 'OK',
+          handler: data => {
+            sp.soluong=data.soluong;
+            sp.quycach=data.quycach;
+          }
+        }
+      ]
+    });
+    prompt.present();
+  }
+
+  XoaHH(sp)
+  {
+    let index=this.spchon.indexOf(sp)
+    this.spchon.splice(index,1);
+  }
   ionViewDidLoad() {
     console.log(this.dh.getmadh());
   }

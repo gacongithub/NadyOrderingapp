@@ -42,11 +42,19 @@
     <div *ngSwitchCase="'caseKH'" radio-group>
       <ion-searchbar (input)="getItems($event)"></ion-searchbar>
       <ion-list>
-        <ion-item *ngFor="let item of items">
+        <ion-item-sliding *ngFor="let item of items">
+          <ion-item>
         <!--<ion-item *virtualItem="let item of items">-->
-          <ion-label style="font-size: 0.8em;">{{item.ten_kh}}</ion-label>  
-          <ion-radio value={{item.ma_kh}} (click)="getkh(item)"></ion-radio>
-        </ion-item>
+            <h3 style="font-size: 0.8em;">{{item.ten_kh}}</h3>  
+            <h4 style="font-size: 0.6em;">{{item.diachi}}</h4>  
+          </ion-item>
+          <ion-item-options side="right">
+            <button ion-button color="{{_color}}" (click)="getkh(item)">
+              <ion-icon name="checkmark"></ion-icon>
+              Chọn</button>
+          </ion-item-options>
+          <!--<ion-radio value={{item.ma_kh}} (click)="getkh(item)"></ion-radio>-->
+        </ion-item-sliding>
       </ion-list>  
       <!--<ion-infinite-scroll (ionInfinite)="doInfinite($event)">
         <ion-infinite-scroll-content></ion-infinite-scroll-content>
